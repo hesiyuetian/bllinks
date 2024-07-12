@@ -5,10 +5,10 @@ const router: Router = Router();
 router.get('/1223123', async (req: any, res) => {
     try {
         const info = {
-            icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR40vua4OVPkDEXxHVLZoz7dTEI4kpBMn7JAw&s',
+            icon: 'https://asset.si.online/c43cd76c060245b794b0d544ecd83f04.png',
             label: '1 SOL',
-            title: '在线乞讨Online begging',
-            description: '乞讨赚钱拯救女大学生Begging to save female university students',
+            title: '全球募集Global fundraising',
+            description: '全球追债拯救许皮带Global fundraising to save many belts',
             links: {
                 actions: [
                     { label: '0.01 SOL', href: '/api/transaction/send?amount=0.01&id=91313b6a0b&debug=undefined' },
