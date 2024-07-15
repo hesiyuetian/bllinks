@@ -14,13 +14,6 @@ router.get('/1223123', async (req: any, res) => {
                     {
                         label: '0.01 SOL',
                         href: '/api/transaction/send?amount=0.01&id=91313b6a0b&debug=undefined',
-                        parameters: [
-                            {
-                                name: 'memo',
-                                label: 'Enter your message',
-                                required: true,
-                            },
-                        ],
                     },
                     { label: '0.1 SOL', href: '/api/transaction/send?amount=0.1&id=91313b6a0b&debug=undefined' },
                     { label: '0.001 SOL', href: '/api/transaction/send?amount=0.001&id=91313b6a0b&debug=undefined' },
