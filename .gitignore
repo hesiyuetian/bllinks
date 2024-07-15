@@ -6,6 +6,7 @@ dist
 task
 .data
 files/*
+shell/*
 rds-combined-ca-bundle.pem
 tmp/*
 
