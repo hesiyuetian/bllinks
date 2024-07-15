@@ -136,7 +136,7 @@ export class SolTransaction {
     } catch (error) {
       // TODO check why failed
       console.log(error);
-      return null;
+      return OnChainTransactionStatus.FAILED;
     }
   }
 }

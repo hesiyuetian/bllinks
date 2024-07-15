@@ -10,7 +10,7 @@ import BigNumber from 'bignumber.js';
 const router: Router = Router();
 const solTransaction: SolTransaction = new SolTransaction();
 
-router.get('/send', async (req: any, res) => {
+router.get('/pay', async (req: any, res) => {
     try {
         const { amount, id, debug } = req.query;
         res.send({ amount, id, debug });
@@ -18,7 +18,7 @@ router.get('/send', async (req: any, res) => {
         res.send(Result.err(500, e.message || String(e)));
     }
 });
-router.get('/pay', async (req: any, res) => {
+router.get('/send', async (req: any, res) => {
     try {
         let { amount, id, debug, payCurrency } = req.query;
         payCurrency = payCurrency || 'SOL';
@@ -58,7 +58,7 @@ router.get('/pay', async (req: any, res) => {
         // Serialize and return
         const base = transaction.serialize({ requireAllSignatures: false, verifySignatures: false }).toString('base64');
         // res.send({ amount, id, debug });
-        return { transaction: base, message: 'Tranasction created successfully' };
+        res.send({ transaction: base, message: 'Transaction created successfully' });
     } catch (e: any) {
         res.send(Result.err(500, e.message || String(e)));
     }

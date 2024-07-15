@@ -5,7 +5,7 @@ export const getPrice = async (currencyId: string): Promise<string> => {
   try {
     const response = await axios.get(`https://pro-api.coinmarketcap.com/v2/tools/price-conversion?amount=1&id=${currencyId}`, {
       headers: {
-        'X-CMC_PRO_API_KEY': process.env.CMC_API_KEY,
+        'X-CMC_PRO_API_KEY': process.env.CMC_API_KEY!,
         Accept: 'application/json',
       },
     });
@@ -21,7 +21,7 @@ export const getInfo = async (contractAddr: string): Promise<any> => {
   try {
     const response = await axios.get(`https://pro-api.coinmarketcap.com/v2/cryptocurrency/info?address=${contractAddr}`, {
       headers: {
-        'X-CMC_PRO_API_KEY': process.env.CMC_API_KEY,
+        'X-CMC_PRO_API_KEY': process.env.CMC_API_KEY!,
         Accept: 'application/json',
       },
     });
