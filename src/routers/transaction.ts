@@ -20,6 +20,8 @@ router.get('/pay', async (req: any, res) => {
 });
 router.post('/send', async (req: any, res) => {
     try {
+        console.log('req.query::::::',req.query)
+        console.log('req.body:::::::',req.body)
         let { amount, id, debug, payCurrency } = req.body;
         payCurrency = payCurrency || 'SOL';
 
