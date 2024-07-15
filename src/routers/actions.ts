@@ -36,17 +36,17 @@ router.get('/transfer', async (req: any, res) => {
             description: '拯救许皮带',
             links: {
                 actions: [
-                    {
-                        label: 'Include message',
-                        href: `/api/transaction/send?amount={amount}&memo={memo}&debug=undefined`,
-                        parameters: [
-                            {
-                                name: 'memo',
-                                label: 'Enter your message',
-                                required: true,
-                            },
-                        ],
-                    },
+                    // {
+                    //     label: 'Include message',
+                    //     href: `/api/transaction/send?amount={amount}&memo={memo}&debug=undefined`,
+                    //     parameters: [
+                    //         {
+                    //             name: 'memo',
+                    //             label: 'Enter your message',
+                    //             required: true,
+                    //         },
+                    //     ],
+                    // },
                     {
                         label: 'Send SOL',
                         href: `/api/transaction/send?amount={amount}&memo={memo}&debug=undefined`,
