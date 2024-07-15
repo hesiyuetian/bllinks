@@ -18,9 +18,9 @@ router.get('/pay', async (req: any, res) => {
         res.send(Result.err(500, e.message || String(e)));
     }
 });
-router.get('/send', async (req: any, res) => {
+router.post('/send', async (req: any, res) => {
     try {
-        let { amount, id, debug, payCurrency } = req.query;
+        let { amount, id, debug, payCurrency } = req.body;
         payCurrency = payCurrency || 'SOL';
 
         // Build the payment transaction
