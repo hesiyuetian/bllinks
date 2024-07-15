@@ -10,7 +10,7 @@ app.use(fileUpload({ createParentPath: true }));
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, DELETE');
     res.header('Access-Control-Allow-Origin', `${req.headers.origin || '*'}`);
-    res.header('Access-Control-Allow-Headers', 'Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,X-Data-Type,X-Requested-With,X-Data-Type,X-Auth-Token,X-chainid,X-GATEWAY-API-KEY');
+    res.header('Access-Control-Allow-Headers', 'Authorization,Content-Type,Accept-Encoding');
     res.header('Access-Control-Allow-Credentials', 'true');
     res.setTimeout(100000000, () => {
         res.status(408);
