@@ -29,7 +29,7 @@ router.post('/send', async (req: any, res) => {
         // Build the payment transaction
         const sender = new PublicKey(SOLANA_ENV.SOLANA_PALTFORM_ACCOUNT);
         const receiver = new PublicKey(SOLANA_ENV.SOLANA_PALTFORM_ACCOUNT);
-        const quantity = Number(amount) * 0.01;
+        const quantity = new BigNumber(amount).multipliedBy(0.01).toFixed();
         const feePayer = Keypair.fromSecretKey(bs58.decode(SOLANA_ENV.SOLANA_FEEPAYER_PRIVATE_KEY));
 
         let transaction: Transaction;

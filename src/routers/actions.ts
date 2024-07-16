@@ -5,7 +5,7 @@ const router: Router = Router();
 router.get('/1223123', async (req: any, res) => {
     try {
         const info = {
-            icon: 'https://si.online/assets/banner-img-DOVQ5tEm.png',
+            icon: 'https://asset.si.online/8f4eceb475d266e748e4bec810c8b266.png',
             label: 'GPU Cloud Mining',
             title: 'H100-1',
             description: 'Buy GPU-based Node H100-1',
