@@ -2,7 +2,7 @@ import { Router } from 'express';
 import Result from '../utils/result';
 const router: Router = Router();
 
-router.get('/1223123', async (req: any, res) => {
+router.get('/h100-1', async (req: any, res) => {
     try {
         const info = {
             icon: 'https://asset.si.online/8f4eceb475d266e748e4bec810c8b266.png',
